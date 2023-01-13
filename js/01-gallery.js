@@ -28,8 +28,9 @@ galleryList.addEventListener('click', OpenImage)
 
 function OpenImage (evt){
    evt.preventDefault();  
-  console.dir(evt.target);
-  console.dir(evt.currentTarget);
+//    console.dir(evt.target);
+   const url = evt.target.dataset.source;
+   console.log (url);
 
 
 }
