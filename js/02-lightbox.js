@@ -23,8 +23,10 @@ galleryList.addEventListener('click', OpenImage)
 
 function OpenImage (evt){
    evt.preventDefault();  
-  console.dir(evt.target);
-  console.dir(evt.currentTarget);
-
+  
+  var lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: `alt`,
+    captionDelay: 250
+  });
 
 }
