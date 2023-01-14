@@ -1,5 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
+// import * as basicLightbox from 'basiclightbox'
+
 
 console.log(galleryItems);
 
@@ -28,11 +30,10 @@ galleryList.addEventListener('click', OpenImage)
 
 function OpenImage (evt){
    evt.preventDefault();  
-//    console.dir(evt.target);
-   const url = evt.target.dataset.source;
-   console.log (url);
-
-
+   let url = evt.target.dataset.source;
+   
+   const instance = basicLightbox.create(`<img width="1280"  src="${url}">`)
+   console.log(instance);
+   instance.show();
 }
-
 
