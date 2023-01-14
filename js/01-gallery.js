@@ -6,7 +6,6 @@ import { galleryItems } from './gallery-items.js';
 console.log(galleryItems);
 
 const galleryList = document.querySelector('.gallery');
-console.log();
 
 const markup = galleryItems.reduce((acc,{
     preview,
@@ -23,7 +22,6 @@ const markup = galleryItems.reduce((acc,{
     </a>
    </div>`, '');
 
-console.log ();
 
 galleryList.insertAdjacentHTML('beforeend', markup)
 galleryList.addEventListener('click', OpenImage)
@@ -33,7 +31,6 @@ function OpenImage (evt){
    let url = evt.target.dataset.source;
    
    const instance = basicLightbox.create(`<img width="1280"  src="${url}">`)
-   console.log(instance);
    instance.show();
 
 
