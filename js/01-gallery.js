@@ -35,5 +35,8 @@ function OpenImage (evt){
    const instance = basicLightbox.create(`<img width="1280"  src="${url}">`)
    console.log(instance);
    instance.show();
+
+
+   
 }
 
