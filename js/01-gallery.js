@@ -24,9 +24,9 @@ const markup = galleryItems.reduce((acc,{
 
 
 galleryList.insertAdjacentHTML('beforeend', markup)
-galleryList.addEventListener('click', OpenImage)
+galleryList.addEventListener('click', openImage)
 
-function OpenImage (evt){
+function openImage (evt){
    evt.preventDefault();  
    let url = evt.target.dataset.source;
    
