@@ -19,14 +19,15 @@ const markup = galleryItems.reduce((acc,{
 console.log ();
 
 galleryList.insertAdjacentHTML('beforeend', markup)
-galleryList.addEventListener('click', OpenImage)
+galleryList.addEventListener('click', openImage)
 
-function OpenImage (evt){
+new SimpleLightbox('.gallery a', {
+  captionsData: `alt`,
+  captionDelay: 250
+});
+
+
+function openImage (evt){
    evt.preventDefault();  
-  
-  var lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: `alt`,
-    captionDelay: 250
-  });
 
 }
